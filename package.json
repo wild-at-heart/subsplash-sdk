@@ -1,12 +1,13 @@
 {
-    "name": "subsplash-sdk",
-    "version": "1.0.0",
+    "name": "@wildatheart/subsplash-sdk",
+    "version": "1.0.1",
     "description": "An unofficial Node SDK for working with the Subsplash API.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc",
-        "test": "vitest"
+        "test": "vitest",
+        "publish": "npm publish --access public"
     },
     "repository": {
         "type": "git",
@@ -29,5 +30,6 @@
     "dependencies": {
         "axios": "^1.7.2",
         "dotenv": "^16.4.5"
-    }
+    },
+    "registry": "https://registry.npmjs.org/"
 }
