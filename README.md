@@ -39,16 +39,16 @@ npm install @wildatheart/subsplash-sdk
 Use the SDK in your project:
 
 ```typescript
-import { Subsplash } from '@wildatheart/subsplash-sdk';
+import { MediaItems } from '@wildatheart/subsplash-sdk';
 
-const subsplash = new Subsplash();
-await subsplash.authenticate({
+const mediaItems = new MediaItems();
+await mediaItems.authenticate({
   clientId: 'your-api-key',
   clientSecret: 'your-app-id',
   appKey: 'your-subsplash-app-key',
 });
 
-const mediaItems = await subsplash.getMediaItems();
+const items = await mediaItems.all();
 
 // Work with the media items
 ```
