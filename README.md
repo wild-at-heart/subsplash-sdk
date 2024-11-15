@@ -12,17 +12,17 @@ This project is in early development and is and missing a ton of the features av
 
 **subsplash-sdk** wants to be:
 
--   **Consistent**, offering all of the functionality available through the Subsplash API.
--   **Type-safe**, providing TypeScript definitions for all of the API methods and Subsplash Objects.
+- **Consistent**, offering all of the functionality available through the Subsplash API.
+- **Type-safe**, providing TypeScript definitions for all of the API methods and Subsplash Objects.
 
 ## Current Subplash API Support
 
 `media/v1`
 
--   [x] Get Media Series
--   [x] Create Media Series
--   [x] Get Media Item
--   [x] Create Media Item
+- [x] Get Media Series
+- [x] Create Media Series
+- [x] Get Media Item
+- [x] Create Media Item
 
 ## Getting started
 
@@ -39,13 +39,15 @@ npm install @wildatheart/subsplash-sdk
 Use the SDK in your project:
 
 ```typescript
-import { Subsplash } from "@wildatheart/subsplash-sdk";
+import { Subsplash } from '@wildatheart/subsplash-sdk';
 
-const subsplash = new Subsplash({
-    clientId: "your-api-key",
-    clientSecret: "your-app-id",
-    appKey: "your-subsplash-app-key",
+const subsplash = new Subsplash();
+await subsplash.authenticate({
+  clientId: 'your-api-key',
+  clientSecret: 'your-app-id',
+  appKey: 'your-subsplash-app-key',
 });
+
 const mediaItems = await subsplash.getMediaItems();
 
 // Work with the media items
